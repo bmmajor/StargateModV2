@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stargatemodrecipes/gold_power_ring",
+  "pattern": [
+    "rgr",
+    "g g",
+    "rgr"
+  ],
+  "key": {
+    "r": {
+      "item": "minecraft:redstone"
+    },
+    "g": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "stargatemod:gold_power_ring",
+    "count": 4
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stargatemodrecipes/firstblock",
+  "pattern": [
+    "#X#",
+    "XxX",
+    "#X#"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:storage_blocks/lapis"
+    },
+    "X": {
+      "item": "stargatemod:gold_power_ring"
+    },
+    "x": {
+      "item": "stargatemod:lantean_control_block"
+    }
+  },
+  "result": {
+    "item": "stargatemod:firstblock"
+  }
+}

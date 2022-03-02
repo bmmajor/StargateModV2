@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stargatemodrecipes/zpmcrafter",
+  "pattern": [
+    "#X#",
+    "XxX",
+    "#X#"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:obsidian"
+    },
+    "X": {
+      "tag": "forge:storage_blocks/iron"
+    },
+    "x": {
+      "item": "stargatemod:lantean_control_block"
+    }
+  },
+  "result": {
+    "item": "stargatemod:zpmcrafter"
+  }
+}

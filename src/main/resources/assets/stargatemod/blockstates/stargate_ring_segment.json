@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "stargatemod:block/stargate_ring_segment" }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "stargatemod:block/stargate_chevron",
+    "north": "stargatemod:block/stargate_chevron",
+    "south": "stargatemod:block/stargate_chevron",
+    "east": "stargatemod:block/stargate_chevron",
+    "west": "stargatemod:block/stargate_chevron",
+    "up": "stargatemod:block/stargate_chevron",
+    "down": "stargatemod:block/stargate_chevron"
+  }
+}

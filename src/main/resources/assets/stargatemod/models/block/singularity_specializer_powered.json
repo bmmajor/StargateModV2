@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "stargatemod:block/singularity_specializer_powered",
+    "up": "stargatemod:block/singularity_specializer_powered_top",
+    "north": "stargatemod:block/singularity_specializer_powered_front",
+    "south": "stargatemod:block/singularity_specializer_powered",
+    "east": "stargatemod:block/singularity_specializer_powered",
+    "west": "stargatemod:block/singularity_specializer_powered"
+  }
+}

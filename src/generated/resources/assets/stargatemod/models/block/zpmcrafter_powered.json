@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "stargatemod:block/zpmcrafter_bottom",
+    "up": "stargatemod:block/zpmcrafter_powered_top",
+    "north": "stargatemod:block/zpmcrafter_powered",
+    "south": "stargatemod:block/zpmcrafter_powered",
+    "east": "stargatemod:block/zpmcrafter_powered",
+    "west": "stargatemod:block/zpmcrafter_powered"
+  }
+}

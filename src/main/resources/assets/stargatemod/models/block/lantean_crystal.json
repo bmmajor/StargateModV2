@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "stargatemod:block/lantean_crystal",
+    "up": "stargatemod:block/lantean_crystal",
+    "north": "stargatemod:block/lantean_crystal",
+    "south": "stargatemod:block/lantean_crystal",
+    "east": "stargatemod:block/lantean_crystal",
+    "west": "stargatemod:block/lantean_crystal"
+  }
+}

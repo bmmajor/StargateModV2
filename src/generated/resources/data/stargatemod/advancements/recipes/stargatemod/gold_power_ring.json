@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "stargatemod:gold_power_ring"
+    ]
+  },
+  "criteria": {
+    "gold-redstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:gold_ingot"
+          },
+          {
+            "item": "minecraft:redstone"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "stargatemod:gold_power_ring"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "gold-redstone",
+      "has_the_recipe"
+    ]
+  ]
+}

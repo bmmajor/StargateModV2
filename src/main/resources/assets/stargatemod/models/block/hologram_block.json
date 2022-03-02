@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "stargatemod:block/hologram_block_item"
+  }
+}

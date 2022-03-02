@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "stargatemod:zpmcrafter"
+    ]
+  },
+  "criteria": {
+    "iron_obsidian_quartz": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:iron_block"
+          },
+          {
+            "item": "minecraft:obsidian"
+          },
+          {
+            "item": "minecraft:quartz_block"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "stargatemod:zpmcrafter"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "iron_obsidian_quartz",
+      "has_the_recipe"
+    ]
+  ]
+}

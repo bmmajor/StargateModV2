@@ -1,0 +1,11 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "stargatemod:block/firstblock",
+    "up": "stargatemod:block/firstblock_top",
+    "north": "stargatemod:block/firstblock_front",
+    "south": "stargatemod:block/firstblock",
+    "east": "stargatemod:block/firstblock",
+    "west": "stargatemod:block/firstblock"
+  }
+}

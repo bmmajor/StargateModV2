@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "stargatemod:lantean_crystal"
+    ]
+  },
+  "criteria": {
+    "redstone-quartz-glowstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:redstone"
+          },
+          {
+            "item": "minecraft:quartz"
+          },
+          {
+            "item": "minecraft:glowstone_dust"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "stargatemod:lantean_crystal"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "redstone-quartz-glowstone",
+      "has_the_recipe"
+    ]
+  ]
+}

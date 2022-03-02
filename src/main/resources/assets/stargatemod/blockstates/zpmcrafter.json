@@ -1,0 +1,50 @@
+{
+  "variants": {
+    "facing=down,powered=false": {
+      "model": "stargatemod:block/zpmcrafter",
+      "x": 90
+    },
+    "facing=up,powered=false": {
+      "model": "stargatemod:block/zpmcrafter",
+      "x": -90
+    },
+    "facing=north,powered=false": {
+      "model": "stargatemod:block/zpmcrafter"
+    },
+    "facing=south,powered=false": {
+      "model": "stargatemod:block/zpmcrafter",
+      "y": 180
+    },
+    "facing=west,powered=false": {
+      "model": "stargatemod:block/zpmcrafter",
+      "y": 270
+    },
+    "facing=east,powered=false": {
+      "model": "stargatemod:block/zpmcrafter",
+      "y": 90
+    },
+    "facing=down,powered=true": {
+      "model": "stargatemod:block/zpmcrafter_powered",
+      "x": 90
+    },
+    "facing=up,powered=true": {
+      "model": "stargatemod:block/zpmcrafter_powered",
+      "x": -90
+    },
+    "facing=north,powered=true": {
+      "model": "stargatemod:block/zpmcrafter_powered"
+    },
+    "facing=south,powered=true": {
+      "model": "stargatemod:block/zpmcrafter_powered",
+      "y": 180
+    },
+    "facing=west,powered=true": {
+      "model": "stargatemod:block/zpmcrafter_powered",
+      "y": 270
+    },
+    "facing=east,powered=true": {
+      "model": "stargatemod:block/zpmcrafter_powered",
+      "y": 90
+    }
+  }
+}

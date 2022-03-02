@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "stargatemodrecipes/lantean_crystal",
+  "pattern": [
+    "gQg",
+    "rQr",
+    "gQg"
+  ],
+  "key": {
+    "g": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "Q": {
+      "item": "minecraft:quartz_pillar"
+    },
+    "r": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "stargatemod:lantean_crystal",
+    "count": 8
+  }
+}
