@@ -1,5 +1,6 @@
 package com.bmmajor20.stargatemod.setup;
 
+import com.bmmajor20.stargatemod.blocks.machines.cosmicextractor.CosmicExtractorScreen;
 import com.bmmajor20.stargatemod.blocks.machines.generators.FirstBlockScreen;
 import com.bmmajor20.stargatemod.StargateMod;
 import com.bmmajor20.stargatemod.blocks.HologramBlockRenderer;
@@ -28,6 +29,7 @@ public class ClientSetup {
         ScreenManager.registerFactory(Registration.FIRSTBLOCK_CONTAINER.get(), FirstBlockScreen::new);
         ScreenManager.registerFactory(Registration.ZPMCRAFTER_CONTAINER.get(), ZPMCrafterScreen::new);
         ScreenManager.registerFactory(Registration.SINGULARITY_SPECIALIZER_CONTAINER.get(), SingularitySpecializerScreen::new);
+        ScreenManager.registerFactory(Registration.COSMIC_EXTRACTOR_CONTAINER.get(), CosmicExtractorScreen::new);
         //RenderingRegistry.registerEntityRenderingHandler(Registration.WEIRDMOB.get(), WeirdMobRenderer::new);
         //ModelLoaderRegistry.registerLoader(new ResourceLocation(MyTutorial.MODID, "fancyloader"), new FancyModelLoader());
 

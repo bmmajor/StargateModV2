@@ -12,6 +12,92 @@ import static net.minecraft.block.Blocks.*;
 // null = Block doesn't get checked
 // AIR = There isn't allowed to be any block there, space must be empty (a.k.a. Air) in-game
 public class MultiBlocks {
+    public static class Observatory {
+        private static final Block[][][] observatoryLayout = {
+                {
+                        {AIR,                   AIR,                    LANTEAN_CRYSTAL.get(),  LANTEAN_CRYSTAL.get(),  LANTEAN_CRYSTAL.get(),  AIR,                    AIR},
+                        {AIR,                   LANTEAN_CRYSTAL.get(),  GLASS,                  GLASS,                  GLASS,                  LANTEAN_CRYSTAL.get(),  AIR},
+                        {LANTEAN_CRYSTAL.get(), GLASS,                  GLASS,                  GLASS,                  GLASS,                  GLASS,                  LANTEAN_CRYSTAL.get()},
+                        {LANTEAN_CRYSTAL.get(), GLASS,                  GLASS,                  REDSTONE_BLOCK,         GLASS,                  GLASS,                  LANTEAN_CRYSTAL.get()},
+                        {LANTEAN_CRYSTAL.get(), GLASS,                  GLASS,                  GLASS,                  GLASS,                  GLASS,                  LANTEAN_CRYSTAL.get()},
+                        {AIR,                   LANTEAN_CRYSTAL.get(),  GLASS,                  GLASS,                  GLASS,                  LANTEAN_CRYSTAL.get(),  AIR},
+                        {AIR,                   AIR,                    LANTEAN_CRYSTAL.get(),  LANTEAN_CRYSTAL.get(),  LANTEAN_CRYSTAL.get(),  AIR,                    AIR},
+                },
+                {
+                        {AIR,                   AIR,                    AIR,                    AIR,                    AIR,                    AIR,                    AIR},
+                        {AIR,                   AIR,                    LANTEAN_CRYSTAL.get(),  GLASS,                  LANTEAN_CRYSTAL.get(),  AIR,                    AIR},
+                        {AIR,                   LANTEAN_CRYSTAL.get(),  GLASS,                  AIR,                    GLASS,                  LANTEAN_CRYSTAL.get(),  AIR},
+                        {AIR,                   GLASS,                  AIR,                    END_ROD,                AIR,                    GLASS,                  AIR},
+                        {AIR,                   LANTEAN_CRYSTAL.get(),  GLASS,                  AIR,                    GLASS,                  LANTEAN_CRYSTAL.get(),  AIR},
+                        {AIR,                   AIR,                    LANTEAN_CRYSTAL.get(),  GLASS,                  LANTEAN_CRYSTAL.get(),  AIR,                    AIR},
+                        {AIR,                   AIR,                    AIR,                    AIR,                    AIR,                    AIR,                    AIR},
+                },
+                {
+                        {AIR,                   AIR,                    AIR,                    AIR,                    AIR,                    AIR,                    AIR},
+                        {AIR,                   AIR,                    LANTEAN_CRYSTAL.get(),  GLASS,                  LANTEAN_CRYSTAL.get(),  AIR,                    AIR},
+                        {AIR,                   LANTEAN_CRYSTAL.get(),  GLASS,                  AIR,                    GLASS,                  LANTEAN_CRYSTAL.get(),  AIR},
+                        {AIR,                   GLASS,                  AIR,                    AIR,                    AIR,                    GLASS,                  AIR},
+                        {AIR,                   LANTEAN_CRYSTAL.get(),  GLASS,                  AIR,                    GLASS,                  LANTEAN_CRYSTAL.get(),  AIR},
+                        {AIR,                   AIR,                    LANTEAN_CRYSTAL.get(),  GLASS,                  LANTEAN_CRYSTAL.get(),  AIR,                    AIR},
+                        {AIR,                   AIR,                    AIR,                    AIR,                    AIR,                    AIR,                    AIR},
+                },
+                {
+                        {AIR,                   AIR,                    AIR,                    AIR,                    AIR,                    AIR,                    AIR},
+                        {AIR,                   AIR,                    LANTEAN_CRYSTAL.get(),  GLASS,                  LANTEAN_CRYSTAL.get(),  AIR,                    AIR},
+                        {AIR,                   LANTEAN_CRYSTAL.get(),  GLASS,                  AIR,                    GLASS,                  LANTEAN_CRYSTAL.get(),  AIR},
+                        {AIR,                   GLASS,                  AIR,                    AIR,                    AIR,                    GLASS,                  AIR},
+                        {AIR,                   LANTEAN_CRYSTAL.get(),  GLASS,                  AIR,                    GLASS,                  LANTEAN_CRYSTAL.get(),  AIR},
+                        {AIR,                   AIR,                    LANTEAN_CRYSTAL.get(),  GLASS,                  LANTEAN_CRYSTAL.get(),  AIR,                    AIR},
+                        {AIR,                   AIR,                    AIR,                    AIR,                    AIR,                    AIR,                    AIR},
+                },
+                {
+                        {AIR,                   AIR,                    AIR,                    AIR,                    AIR,                    AIR,                    AIR},
+                        {AIR,                   AIR,                    LANTEAN_CRYSTAL.get(),  GLASS,                  LANTEAN_CRYSTAL.get(),  AIR,                    AIR},
+                        {AIR,                   LANTEAN_CRYSTAL.get(),  GLASS,                  AIR,                    GLASS,                  LANTEAN_CRYSTAL.get(),  AIR},
+                        {AIR,                   GLASS,                  AIR,                    AIR,                    AIR,                    GLASS,                  AIR},
+                        {AIR,                   LANTEAN_CRYSTAL.get(),  GLASS,                  AIR,                    GLASS,                  LANTEAN_CRYSTAL.get(),  AIR},
+                        {AIR,                   AIR,                    LANTEAN_CRYSTAL.get(),  GLASS,                  LANTEAN_CRYSTAL.get(),  AIR,                    AIR},
+                        {AIR,                   AIR,                    AIR,                    AIR,                    AIR,                    AIR,                    AIR},
+                },
+                {
+                        {AIR,                   AIR,                    AIR,                    AIR,                    AIR,                    AIR,                    AIR},
+                        {AIR,                   AIR,                    LANTEAN_CRYSTAL.get(),  GLASS,                  LANTEAN_CRYSTAL.get(),  AIR,                    AIR},
+                        {AIR,                   LANTEAN_CRYSTAL.get(),  GLASS,                  AIR,                    GLASS,                  LANTEAN_CRYSTAL.get(),  AIR},
+                        {AIR,                   GLASS,                  AIR,                    END_ROD,                AIR,                    GLASS,                  AIR},
+                        {AIR,                   LANTEAN_CRYSTAL.get(),  GLASS,                  AIR,                    GLASS,                  LANTEAN_CRYSTAL.get(),  AIR},
+                        {AIR,                   AIR,                    LANTEAN_CRYSTAL.get(),  GLASS,                  LANTEAN_CRYSTAL.get(),  AIR,                    AIR},
+                        {AIR,                   AIR,                    AIR,                    AIR,                    AIR,                    AIR,                    AIR},
+                },
+                {
+                        {AIR,                   AIR,                    AIR,                    AIR,                    AIR,                    AIR,                    AIR},
+                        {AIR,                   AIR,                    AIR,                    LANTEAN_CRYSTAL.get(),  AIR,                    AIR,                    AIR},
+                        {AIR,                   AIR,                    LANTEAN_CRYSTAL.get(),  GLASS,                  LANTEAN_CRYSTAL.get(),  AIR,                    AIR},
+                        {AIR,                   LANTEAN_CRYSTAL.get(),  GLASS,                  REDSTONE_BLOCK,         GLASS,                  LANTEAN_CRYSTAL.get(),  AIR},
+                        {AIR,                   AIR,                    LANTEAN_CRYSTAL.get(),  GLASS,                  LANTEAN_CRYSTAL.get(),  AIR,                    AIR},
+                        {AIR,                   AIR,                    AIR,                    LANTEAN_CRYSTAL.get(),  AIR,                    AIR,                    AIR},
+                        {AIR,                   AIR,                    AIR,                    AIR,                    AIR,                    AIR,                    AIR},
+                },
+        }; //TODO: All instances of "END_ROD,                " will become "GOLD_POWER_ROD.get(),   " (name not definitive yet)
+
+        public Observatory() { }
+
+        public static Block[][][] getObservatoryLayout() {
+            return observatoryLayout;
+        }
+
+        public static int getObservatoryBlocksAmount() {
+            int amount = 0;
+            for (Block[][] layer : observatoryLayout) {
+                for (Block[] line : layer) {
+                    for (Block block : line) {
+                        if (block != null && block != AIR)
+                            amount++;
+                    }
+                }
+            }
+            return amount;
+        }
+    }
     public static class Stargate {
         private final Block[][] stargateLayout = {
                 {AIR,                   RING_SEGMENT.get(),     RING_SEGMENT.get(),     CHEVRON_BLOCK.get(),    RING_SEGMENT.get(),     RING_SEGMENT.get(),     AIR},

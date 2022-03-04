@@ -1,5 +1,6 @@
 package com.bmmajor20.stargatemod.items;
 
+import com.bmmajor20.stargatemod.items.enums.SingularityProperty;
 import com.bmmajor20.stargatemod.setup.ModSetup;
 import net.minecraft.item.Item;
 

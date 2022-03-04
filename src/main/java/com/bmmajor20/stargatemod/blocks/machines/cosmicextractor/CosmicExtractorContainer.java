@@ -1,4 +1,4 @@
-package com.bmmajor20.stargatemod.blocks.machines.singularityspecializer;
+package com.bmmajor20.stargatemod.blocks.machines.cosmicextractor;
 
 import com.bmmajor20.stargatemod.items.CosmicParticlesContainer;
 import com.bmmajor20.stargatemod.setup.Registration;
@@ -20,17 +20,17 @@ import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
-import static com.bmmajor20.stargatemod.setup.Registration.SINGULARITY_SPECIALIZER;
-import static com.bmmajor20.stargatemod.setup.Registration.SINGULARITY_SPECIALIZER_CONTAINER;
+import static com.bmmajor20.stargatemod.setup.Registration.COSMIC_EXTRACTOR;
+import static com.bmmajor20.stargatemod.setup.Registration.COSMIC_EXTRACTOR_CONTAINER;
 
-public class SingularitySpecializerContainer extends Container {
+public class CosmicExtractorContainer extends Container {
 
     private TileEntity tileEntity;
     private IItemHandler playerInventory;
     private PlayerEntity playerEntity;
 
-    public SingularitySpecializerContainer(int windowID, World world, BlockPos pos, PlayerInventory playerInventory, PlayerEntity player) {
-        super(SINGULARITY_SPECIALIZER_CONTAINER.get(), windowID);
+    public CosmicExtractorContainer(int windowID, World world, BlockPos pos, PlayerInventory playerInventory, PlayerEntity player) {
+        super(COSMIC_EXTRACTOR_CONTAINER.get(), windowID);
         tileEntity = world.getTileEntity(pos);
         this.playerEntity = player;
         this.playerInventory = new InvWrapper(playerInventory);
@@ -48,7 +48,7 @@ public class SingularitySpecializerContainer extends Container {
 
     @Override
     public boolean canInteractWith(PlayerEntity playerIn) {
-        return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()), playerEntity, SINGULARITY_SPECIALIZER.get());
+        return isWithinUsableDistance(IWorldPosCallable.of(tileEntity.getWorld(), tileEntity.getPos()), playerEntity, COSMIC_EXTRACTOR.get());
     }
 
     private void trackPower() {

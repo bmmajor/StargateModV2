@@ -1,6 +1,9 @@
 package com.bmmajor20.stargatemod.setup;
 
 import com.bmmajor20.stargatemod.blocks.*;
+import com.bmmajor20.stargatemod.blocks.machines.cosmicextractor.CosmicExtractor;
+import com.bmmajor20.stargatemod.blocks.machines.cosmicextractor.CosmicExtractorContainer;
+import com.bmmajor20.stargatemod.blocks.machines.cosmicextractor.CosmicExtractorTile;
 import com.bmmajor20.stargatemod.blocks.machines.generators.FirstBlock;
 import com.bmmajor20.stargatemod.blocks.machines.generators.FirstBlockContainer;
 import com.bmmajor20.stargatemod.blocks.machines.generators.FirstBlockTile;
@@ -10,12 +13,18 @@ import com.bmmajor20.stargatemod.blocks.machines.singularityspecializer.Singular
 import com.bmmajor20.stargatemod.blocks.machines.zpmcrafter.ZPMCrafter;
 import com.bmmajor20.stargatemod.blocks.machines.zpmcrafter.ZPMCrafterContainer;
 import com.bmmajor20.stargatemod.blocks.machines.zpmcrafter.ZPMCrafterTile;
+import com.bmmajor20.stargatemod.blocks.multiblocks.observatory.ObservatoryDomeBlock;
+import com.bmmajor20.stargatemod.blocks.multiblocks.observatory.ObservatoryFloorBlock;
+import com.bmmajor20.stargatemod.blocks.multiblocks.observatory.ObservatoryHatchBlock;
+import com.bmmajor20.stargatemod.blocks.multiblocks.observatory.ObservatoryWallBlock;
 import com.bmmajor20.stargatemod.blocks.multiblocks.stargate.ChevronBlock;
 import com.bmmajor20.stargatemod.blocks.multiblocks.stargate.RingSegment;
 import com.bmmajor20.stargatemod.blocks.multiblocks.zpm.LanteanCrystal;
 import com.bmmajor20.stargatemod.blocks.multiblocks.zpm.LanteanCrystalTile;
 import com.bmmajor20.stargatemod.blocks.multiblocks.zpm.StableSingularity;
 import com.bmmajor20.stargatemod.items.*;
+import com.bmmajor20.stargatemod.items.enums.ParticleContainerProperty;
+import com.bmmajor20.stargatemod.items.enums.SingularityProperty;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.container.ContainerType;
@@ -57,13 +66,19 @@ public class Registration {
     public static final RegistryObject<Singularity> SINGULARITY_WH = ITEMS.register("singularity_wh_properties", () -> new Singularity(SingularityProperty.WHITE_HOLE_PROPERTIES));
     public static final RegistryObject<Singularity> SINGULARITY_BOTH = ITEMS.register("singularity_both_properties", () -> new Singularity(SingularityProperty.BOTH_PROPERTIES));
     public static final RegistryObject<ZeroPointModule> ZERO_POINT_MODULE = ITEMS.register("zero_point_module", ZeroPointModule::new);
-    public static final RegistryObject<BlackHoleParticles> BLACK_HOLE_PARTICLES = ITEMS.register("black_hole_particles", BlackHoleParticles::new);
-    public static final RegistryObject<WhiteHoleParticles> WHITE_HOLE_PARTICLES = ITEMS.register("white_hole_particles", WhiteHoleParticles::new);
+    public static final RegistryObject<CosmicParticlesContainer> BLACK_HOLE_PARTICLES = ITEMS.register("black_hole_particles", () -> new CosmicParticlesContainer(ParticleContainerProperty.BLACK_HOLE));
+    public static final RegistryObject<CosmicParticlesContainer> WHITE_HOLE_PARTICLES = ITEMS.register("white_hole_particles", () -> new CosmicParticlesContainer(ParticleContainerProperty.WHITE_HOLE));
 
     // Hologram Block
     public static final RegistryObject<HologramBlock> HOLOGRAM_BLOCK = BLOCKS.register("hologram_block", HologramBlock::new);
     public static final RegistryObject<Item> HOLOGRAM_BLOCK_ITEM = ITEMS.register("hologram_block", () -> new BlockItem(HOLOGRAM_BLOCK.get(), new Item.Properties().group(ModSetup.ITEM_GROUP)));
     public static final RegistryObject<TileEntityType<HologramBlockTile>> HOLOGRAM_BLOCK_TILE = TILES.register("hologram_block", () -> TileEntityType.Builder.create(HologramBlockTile::new, HOLOGRAM_BLOCK.get()).build(null));
+
+    // Observatory BLocks
+    public static final RegistryObject<ObservatoryFloorBlock> OBSERVATORY_FLOOR_BLOCK = BLOCKS.register("observatory_floor_block", ObservatoryFloorBlock::new);
+    public static final RegistryObject<ObservatoryWallBlock> OBSERVATORY_WALL_BLOCK = BLOCKS.register("observatory_wall_block", ObservatoryWallBlock::new);
+    public static final RegistryObject<ObservatoryDomeBlock> OBSERVATORY_DOME_BLOCK = BLOCKS.register("observatory_dome_block", ObservatoryDomeBlock::new);
+    public static final RegistryObject<ObservatoryHatchBlock> OBSERVATORY_HATCH_BLOCK = BLOCKS.register("observatory_hatch_block", ObservatoryHatchBlock::new);
 
     // Stargate Blocks
     public static final RegistryObject<RingSegment> RING_SEGMENT = BLOCKS.register("ring_segment", RingSegment::new);
@@ -96,6 +111,15 @@ public class Registration {
         BlockPos pos = data.readBlockPos();
         World world = inv.player.getEntityWorld();
         return new ZPMCrafterContainer(windowId, world, pos, inv, inv.player);
+    }));
+
+    public static final RegistryObject<CosmicExtractor> COSMIC_EXTRACTOR = BLOCKS.register("cosmic_extractor", CosmicExtractor::new);
+    public static final RegistryObject<Item> COSMIC_EXTRACTOR_ITEM = ITEMS.register("cosmic_extractor", () -> new BlockItem(COSMIC_EXTRACTOR.get(), new Item.Properties().group(ModSetup.ITEM_GROUP)));
+    public static final RegistryObject<TileEntityType<CosmicExtractorTile>> COSMIC_EXTRACTOR_TILE = TILES.register("cosmic_extractor", () -> TileEntityType.Builder.create(CosmicExtractorTile::new, COSMIC_EXTRACTOR.get()).build(null));
+    public static final RegistryObject<ContainerType<CosmicExtractorContainer>> COSMIC_EXTRACTOR_CONTAINER = CONTAINERS.register("cosmic_extractor", () -> IForgeContainerType.create((windowId, inv, data) -> {
+        BlockPos pos = data.readBlockPos();
+        World world = inv.player.getEntityWorld();
+        return new CosmicExtractorContainer(windowId, world, pos, inv, inv.player);
     }));
 
     public static final RegistryObject<SingularitySpecializer> SINGULARITY_SPECIALIZER = BLOCKS.register("singularity_specializer", SingularitySpecializer::new);

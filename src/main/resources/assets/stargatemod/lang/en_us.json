@@ -1,9 +1,15 @@
 {
   "item.stargatemod.gold_power_ring": "Gold Power Ring",
   "item.stargatemod.small_lantean_crystal": "Small Lantean Crystal",
-  "item.stargatemod.singularity": "Singularity",
+  "item.stargatemod.black_hole_particles": "Quasar Matter Remnants Canister",
+  "item.stargatemod.white_hole_particles": "Quasar Antimatter Remnants Canister",
+  "item.stargatemod.singularity": "Inactive Singularity",
+  "item.stargatemod.singularity_bh_properties": "Active Singularity",
+  "item.stargatemod.singularity_wh_properties": "Inversed Singularity",
+  "item.stargatemod.singularity_both_properties": "Dual Singularity",
   "item.stargatemod.zero_point_module": "ZPM",
 
+  "block.stargatemod.hologram_block": "Hologram Block",
   "block.stargatemod.lantean_crystal": "Lantean Crystal",
   "block.stargatemod.lantean_control_block": "Lantean Control Block",
   "block.stargatemod.stargate_ring_segment": "Stargate Ring Segment",
@@ -13,6 +19,7 @@
   "block.stargatemod.firstblock": "Carbon Converter",
   "block.stargatemod.zpmcrafter": "ZPM Crafter",
   "block.stargatemod.singularity_specializer": "Singularity Specializer",
+  "block.stargatemod.cosmic_extractor": "Cosmic Extractor",
 
   "item.stargatemod.mastadge_egg": "Mastadge Spawn Egg",
 

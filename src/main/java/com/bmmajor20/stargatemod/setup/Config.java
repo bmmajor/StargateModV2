@@ -17,6 +17,7 @@ public class Config {
     public static final String SUBCATEGORY_FIRSTBLOCK = "firstblock";
     public static final String SUBCATEGORY_ZPMCRAFTER = "zpmcrafter";
     public static final String SUBCATEGORY_SINGULARITY_SPECIALIZER = "singularity_specializer";
+    public static final String SUBCATEGORY_COSMIC_EXTRACTOR = "cosmic_extractor";
 
     //private static final ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
     //private static final ForgeConfigSpec.Builder CLIENT_BUILDER = new ForgeConfigSpec.Builder();
@@ -70,6 +71,12 @@ public class Config {
     public static ForgeConfigSpec.IntValue SINGULARITY_SPECIALIZER_MAXPOWER;
     public static ForgeConfigSpec.IntValue SINGULARITY_SPECIALIZER_RECEIVE;
 
+    /*
+     *
+     */
+    public static ForgeConfigSpec.IntValue COSMIC_EXTRACTOR_MAXPOWER;
+    public static ForgeConfigSpec.IntValue COSMIC_EXTRACTOR_RECEIVE;
+
     static {
         ForgeConfigSpec.Builder SERVER_BUILDER = new ForgeConfigSpec.Builder();
         ForgeConfigSpec.Builder CLIENT_BUILDER = new ForgeConfigSpec.Builder();
@@ -81,6 +88,7 @@ public class Config {
         setupFirstBlockConfig(SERVER_BUILDER, CLIENT_BUILDER);
         setupZPMCrafterConfig(SERVER_BUILDER, CLIENT_BUILDER);
         setupSingularitySpecializerConfig(SERVER_BUILDER, CLIENT_BUILDER);
+        setupCosmicExtractorConfig(SERVER_BUILDER, CLIENT_BUILDER);
         SERVER_BUILDER.pop();
 
         SERVER_CONFIG = SERVER_BUILDER.build();
@@ -143,6 +151,17 @@ public class Config {
         SINGULARITY_SPECIALIZER_MAXPOWER = SERVER_BUILDER.comment("Maximum power for the Singularity Specializer")
                 .defineInRange("maxPower", 10000000, 0, Integer.MAX_VALUE);
         SINGULARITY_SPECIALIZER_RECEIVE = SERVER_BUILDER.comment("The amount of Energy the machine can receive per tick")
+                .defineInRange("receive", 32000, 0, Integer.MAX_VALUE);
+
+        SERVER_BUILDER.pop();
+    }
+
+    private static void setupCosmicExtractorConfig(ForgeConfigSpec.Builder SERVER_BUILDER, ForgeConfigSpec.Builder CLIENT_BUILDER) {
+        SERVER_BUILDER.comment("Cosmic Extractor settings").push(SUBCATEGORY_COSMIC_EXTRACTOR);
+
+        COSMIC_EXTRACTOR_MAXPOWER = SERVER_BUILDER.comment("Maximum power for the Cosmic Extractor")
+                .defineInRange("maxPower", 10000000, 0, Integer.MAX_VALUE);
+        COSMIC_EXTRACTOR_RECEIVE = SERVER_BUILDER.comment("The amount of Energy the machine can receive per tick")
                 .defineInRange("receive", 32000, 0, Integer.MAX_VALUE);
 
         SERVER_BUILDER.pop();

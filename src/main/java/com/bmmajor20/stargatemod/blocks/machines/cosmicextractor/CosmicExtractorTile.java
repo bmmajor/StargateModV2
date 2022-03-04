@@ -1,18 +1,16 @@
-package com.bmmajor20.stargatemod.blocks.machines.singularityspecializer;
+package com.bmmajor20.stargatemod.blocks.machines.cosmicextractor;
 
-import com.bmmajor20.stargatemod.blocks.machines.zpmcrafter.ZPMCraftingStage;
+import com.bmmajor20.stargatemod.items.CosmicEntityFocusser;
 import com.bmmajor20.stargatemod.items.CosmicParticlesContainer;
 import com.bmmajor20.stargatemod.setup.Config;
 import com.bmmajor20.stargatemod.setup.Registration;
 import com.bmmajor20.stargatemod.tools.CustomEnergyStorage;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
 import net.minecraft.tileentity.ITickableTileEntity;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.Direction;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.Constants;
@@ -26,9 +24,9 @@ import net.minecraftforge.items.ItemStackHandler;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import static com.bmmajor20.stargatemod.setup.Registration.SINGULARITY_SPECIALIZER_TILE;
+import static com.bmmajor20.stargatemod.setup.Registration.COSMIC_EXTRACTOR_TILE;
 
-public class SingularitySpecializerTile extends TileEntity implements ITickableTileEntity {
+public class CosmicExtractorTile extends TileEntity implements ITickableTileEntity {
 
     private final ItemStackHandler itemHandler = createHandler();
     private final CustomEnergyStorage energyStorage = createEnergy();
@@ -36,16 +34,13 @@ public class SingularitySpecializerTile extends TileEntity implements ITickableT
     private final LazyOptional<IItemHandler> handler = LazyOptional.of(() -> itemHandler);
     private final LazyOptional<IEnergyStorage> energy = LazyOptional.of(() -> energyStorage);
 
-    public SingularitySpecializerTile() {
-        super(SINGULARITY_SPECIALIZER_TILE.get());
+    public CosmicExtractorTile() {
+        super(COSMIC_EXTRACTOR_TILE.get());
     }
 
     @Override
     public void tick() {
-        assert world != null;
-        if (world.isRemote) {
-            return;
-        }
+
     }
 
     @Nonnull
@@ -58,17 +53,18 @@ public class SingularitySpecializerTile extends TileEntity implements ITickableT
 
             @Override
             public boolean isItemValid(int slot, @Nonnull ItemStack stack) {
-                if (slot == 0 && stack.getItem() == Registration.SINGULARITY.get()) return true;
+                if (slot == 0 && stack.getItem() instanceof CosmicEntityFocusser) return true;
                 if (slot == 1 && stack.getItem() instanceof CosmicParticlesContainer) return true;
-                return slot == 2 && (stack.getItem() == Registration.SINGULARITY_BH.get() || stack.getItem() == Registration.SINGULARITY_WH.get());
+//                if (slot == 2 && (stack.getItem() == Registration.SINGULARITY_BH.get() || stack.getItem() == Registration.SINGULARITY_WH.get())) return true;
 //                if (slot == 3 && stack.getItem() == Items.REDSTONE_BLOCK) return true;
 //                return slot == 4 && stack.getItem() == Items.END_ROD;
+                return false;
             }
         };
     }
 
     private CustomEnergyStorage createEnergy() {
-        return new CustomEnergyStorage(Config.SINGULARITY_SPECIALIZER_MAXPOWER.get(), Config.SINGULARITY_SPECIALIZER_RECEIVE.get()) {
+        return new CustomEnergyStorage(Config.COSMIC_EXTRACTOR_MAXPOWER.get(), Config.COSMIC_EXTRACTOR_RECEIVE.get()) {
             @Override
             protected void onEnergyChanged() {
                 markDirty();
@@ -146,3 +142,4 @@ public class SingularitySpecializerTile extends TileEntity implements ITickableT
         return super.getCapability(cap, side);
     }
 }
+
