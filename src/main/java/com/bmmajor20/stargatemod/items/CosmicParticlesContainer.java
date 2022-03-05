@@ -10,7 +10,7 @@ public class CosmicParticlesContainer extends Item {
 
     public CosmicParticlesContainer(ParticleContainerProperty property) {
         super(new Item.Properties()
-                .maxStackSize(16)
+                .maxStackSize(64)
                 .group(ModSetup.ITEM_GROUP));
         this.property = property;
     }

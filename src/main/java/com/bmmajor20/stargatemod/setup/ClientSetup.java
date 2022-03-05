@@ -1,6 +1,6 @@
 package com.bmmajor20.stargatemod.setup;
 
-import com.bmmajor20.stargatemod.blocks.machines.cosmicextractor.CosmicExtractorScreen;
+import com.bmmajor20.stargatemod.blocks.multiblocks.observatory.specializations.cosmicextractor.CosmicExtractorScreen;
 import com.bmmajor20.stargatemod.blocks.machines.generators.FirstBlockScreen;
 import com.bmmajor20.stargatemod.StargateMod;
 import com.bmmajor20.stargatemod.blocks.HologramBlockRenderer;

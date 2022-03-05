@@ -1,9 +1,9 @@
 package com.bmmajor20.stargatemod.setup;
 
 import com.bmmajor20.stargatemod.blocks.*;
-import com.bmmajor20.stargatemod.blocks.machines.cosmicextractor.CosmicExtractor;
-import com.bmmajor20.stargatemod.blocks.machines.cosmicextractor.CosmicExtractorContainer;
-import com.bmmajor20.stargatemod.blocks.machines.cosmicextractor.CosmicExtractorTile;
+import com.bmmajor20.stargatemod.blocks.multiblocks.observatory.specializations.cosmicextractor.CosmicExtractor;
+import com.bmmajor20.stargatemod.blocks.multiblocks.observatory.specializations.cosmicextractor.CosmicExtractorContainer;
+import com.bmmajor20.stargatemod.blocks.multiblocks.observatory.specializations.cosmicextractor.CosmicExtractorTile;
 import com.bmmajor20.stargatemod.blocks.machines.generators.FirstBlock;
 import com.bmmajor20.stargatemod.blocks.machines.generators.FirstBlockContainer;
 import com.bmmajor20.stargatemod.blocks.machines.generators.FirstBlockTile;
@@ -74,11 +74,22 @@ public class Registration {
     public static final RegistryObject<Item> HOLOGRAM_BLOCK_ITEM = ITEMS.register("hologram_block", () -> new BlockItem(HOLOGRAM_BLOCK.get(), new Item.Properties().group(ModSetup.ITEM_GROUP)));
     public static final RegistryObject<TileEntityType<HologramBlockTile>> HOLOGRAM_BLOCK_TILE = TILES.register("hologram_block", () -> TileEntityType.Builder.create(HologramBlockTile::new, HOLOGRAM_BLOCK.get()).build(null));
 
-    // Observatory BLocks
+    // Observatory Blocks
     public static final RegistryObject<ObservatoryFloorBlock> OBSERVATORY_FLOOR_BLOCK = BLOCKS.register("observatory_floor_block", ObservatoryFloorBlock::new);
+    public static final RegistryObject<Item> OBSERVATORY_FLOOR_BLOCK_ITEM = ITEMS.register("observatory_floor_block", () -> new BlockItem(OBSERVATORY_FLOOR_BLOCK.get(), new Item.Properties().group(ModSetup.ITEM_GROUP)));
     public static final RegistryObject<ObservatoryWallBlock> OBSERVATORY_WALL_BLOCK = BLOCKS.register("observatory_wall_block", ObservatoryWallBlock::new);
+    public static final RegistryObject<Item> OBSERVATORY_WALL_BLOCK_ITEM = ITEMS.register("observatory_wall_block", () -> new BlockItem(OBSERVATORY_WALL_BLOCK.get(), new Item.Properties().group(ModSetup.ITEM_GROUP)));
     public static final RegistryObject<ObservatoryDomeBlock> OBSERVATORY_DOME_BLOCK = BLOCKS.register("observatory_dome_block", ObservatoryDomeBlock::new);
+    public static final RegistryObject<Item> OBSERVATORY_DOME_BLOCK_ITEM = ITEMS.register("observatory_dome_block", () -> new BlockItem(OBSERVATORY_DOME_BLOCK.get(), new Item.Properties().group(ModSetup.ITEM_GROUP)));
     public static final RegistryObject<ObservatoryHatchBlock> OBSERVATORY_HATCH_BLOCK = BLOCKS.register("observatory_hatch_block", ObservatoryHatchBlock::new);
+    public static final RegistryObject<Item> OBSERVATORY_HATCH_BLOCK_ITEM = ITEMS.register("observatory_hatch_block", () -> new BlockItem(OBSERVATORY_HATCH_BLOCK.get(), new Item.Properties().group(ModSetup.ITEM_GROUP)));
+    // Observatory Tiles
+    public static final RegistryObject<ObservatoryMainControlBlock> OBSERVATORY_MAIN_CONTROL = BLOCKS.register("observatory_main_control_block", ObservatoryMainControlBlock::new);
+    public static final RegistryObject<Item> OBSERVATORY_MAIN_CONTROL_ITEM = ITEMS.register("observatory_main_control_block", () -> new BlockItem(OBSERVATORY_MAIN_CONTROL.get(), new Item.Properties().group(ModSetup.ITEM_GROUP)));
+    public static final RegistryObject<ObservatoryHatchControlBlock> OBSERVATORY_HATCH_CONTROL = BLOCKS.register("observatory_hatch_control_block", ObservatoryHatchControlBlock::new);
+    public static final RegistryObject<Item> OBSERVATORY_HATCH_CONTROL_ITEM = ITEMS.register("observatory_hatch_control_block", () -> new BlockItem(OBSERVATORY_HATCH_CONTROL.get(), new Item.Properties().group(ModSetup.ITEM_GROUP)));
+    // Observatory Specialization Machines
+
 
     // Stargate Blocks
     public static final RegistryObject<RingSegment> RING_SEGMENT = BLOCKS.register("ring_segment", RingSegment::new);

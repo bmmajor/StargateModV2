@@ -1,4 +1,4 @@
-package com.bmmajor20.stargatemod.blocks.machines.cosmicextractor;
+package com.bmmajor20.stargatemod.blocks.multiblocks.observatory.specializations.cosmicextractor;
 
 import com.bmmajor20.stargatemod.items.CosmicEntityFocusser;
 import com.bmmajor20.stargatemod.items.CosmicParticlesContainer;

@@ -1,7 +1,6 @@
-package com.bmmajor20.stargatemod.blocks.machines.cosmicextractor;
+package com.bmmajor20.stargatemod.blocks.multiblocks.observatory.specializations.cosmicextractor;
 
 import com.bmmajor20.stargatemod.StargateMod;
-import com.bmmajor20.stargatemod.blocks.machines.singularityspecializer.SingularitySpecializerContainer;
 import com.bmmajor20.stargatemod.tools.Calculations;
 import com.mojang.blaze3d.platform.GlStateManager;
 import net.minecraft.client.Minecraft;
